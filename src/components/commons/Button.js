@@ -6,7 +6,7 @@ const Button = ({ onPress, children,style,textStyleProps }) => {
 	
 	if (Platform.OS === 'android') {
        return (
-          <TouchableNativeFeedback onPress={onPress} > 
+          <TouchableNativeFeedback delayPressIn={0} onPress={onPress} > 
                <View style={[styles.buttonStyle,style]}><Text style={[textStyle,textStyleProps]}>{children}</Text></View>
           </TouchableNativeFeedback>    
        )
